@@ -221,15 +221,15 @@ In summary, the following table can serve as a template or checklist when defini
 | -------- | ---------| ---------|---------|
 | <li>kWh<li>SCC<li>SCI (default) <li>CO2e, or <li>Other | <li> Unit of Software Function (USF) <li> Number of times to execute USF | <li>Hardware specifications<li>Software Configuration  |<li>Setup Instructions<li>Execution Steps<li>Result Collection and Analysis  |
 
-
 ---
+*Benchmark measurement shall be carbon related, by default is in SCI scores. However, if the benchmarking is done in a controlled environment, all other variables related to carbon emission are being equal, then benchmarking can be measured in energy consumed (e.g. kWh) rather than in SCI.*
 
 #### 2.3 Rating Specification
 ##### 2.3.1 **Rating Components:**
 The common components of a rating specification includes the following:
 1. Rating Scale: Define the rating scale and the criteria for each rating level.
-2. Evaluation Methodology:Detail the evaluation methodology for converting benchmark results to ratings.
-3. Reporting and Disclosure:Standardized format for rating disclosure.
+2. Evaluation Methodology: Detail the evaluation methodology for converting benchmark results to ratings.
+3. Reporting and Disclosure: Standardized format for rating disclosure.
    
 ##### 2.3.2 **Rating Algorithm:**
 To compute the SCER (Software Carbon Efficiency Rating) based on SCI Score performance in relation to peer software within the same category.
