@@ -32,7 +32,7 @@ To create an industry-wide SCER standard for Music Streaming Services that measu
 ### 3. Terminology
 
 - **SCER**: Software Carbon Efficiency Rating
-- **Stream/Watt**: Number of music streams or hours of music played per watt of power consumed.
+- **Streams/Watt-hour**: Number of streams per watt hour of music played.
 - **Data Transfer Efficiency**: The efficiency of data transfer, measured as data transmitted per unit of energy.
 - **Carbon Footprint**: Total amount of CO2e emissions directly and indirectly associated with the music streaming service.
 
@@ -52,7 +52,7 @@ Music streaming services will be categorized based on:
 
 Benchmarking will focus on:
 
-- **Stream/Watt**: The number of streams or hours of music played per watt of power consumed.
+- **Streams/Watt-hour**: The number of music streams per watt hour.
 - **Data Transfer Efficiency**: Data transmitted in relation to the energy consumed.
 - **User Engagement**: Average listening time per user with energy consumption factored in.
 
@@ -60,14 +60,14 @@ Benchmarking will focus on:
 
 The SCER will be classified into three main categories:
 
-- **A**: Highly efficient (>X Stream/Watt), high data transfer efficiency, and optimal user engagement.
-- **B**: Moderately efficient ([Y-X] Stream/Watt), moderate data transfer efficiency, and user engagement.
-- **C**: Less efficient (<Y Stream/Watt), lower data transfer efficiency, and user engagement.
+- **A**: Highly efficient (>X Streams/Watt-hour), high data transfer efficiency, and optimal user engagement.
+- **B**: Moderately efficient ([Y-X] Streams/Watt-hour), moderate data transfer efficiency, and user engagement.
+- **C**: Less efficient (<Y Streams/Watt-hour), lower data transfer efficiency, and user engagement.
 
 ### 8. Rating Calculation Algorithm
 
 #### 8.1 Data Collection
-Measure the Stream/Watt, data transfer efficiency, and user engagement.
+Measure the Streams/Watt-hour, data transfer efficiency, and user engagement.
 
 #### 8.2 Normalization
 Normalize the data against a baseline to ensure fair comparison across different services and qualities.

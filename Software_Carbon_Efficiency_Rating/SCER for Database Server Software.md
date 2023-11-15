@@ -33,7 +33,7 @@ To define and implement a standard that measures and rates the carbon efficiency
 
 - **SCER**: Software Carbon Efficiency Rating
 - **DBMS**: Database Management System
-- **OPS/Watt**: Operations Per Second per Watt
+- **OPS/Watt-hour**: Operations Per Second per Watt
 - **Carbon Footprint**: The total CO2e emissions associated with the DBMS across its lifecycle.
 
 ### 4. Scope
@@ -52,7 +52,7 @@ Database server software is categorized based on:
 
 Benchmarking focuses on:
 
-- **OPS/Watt**: Database operations executed per watt of power consumed.
+- **OPS/Watt-hour**: Database operations executed per watt hour of power consumed.
 - **Transaction Efficiency**: Energy consumed per completed transaction.
 - **Query Optimization**: Energy cost of executing complex queries.
 
@@ -60,14 +60,14 @@ Benchmarking focuses on:
 
 SCER classifications:
 
-- **A**: Highly efficient operations (>X OPS/Watt), advanced query optimization, low energy per transaction.
-- **B**: Moderately efficient ([Y-X] OPS/Watt), standard query optimization, average energy per transaction.
-- **C**: Less efficient (<Y OPS/Watt), basic query optimization, higher energy per transaction.
+- **A**: Highly efficient operations (>X OPS/Watt-hour), advanced query optimization, low energy per transaction.
+- **B**: Moderately efficient ([Y-X] OPS/Watt-hour), standard query optimization, average energy per transaction.
+- **C**: Less efficient (<Y OPS/Watt-hour), basic query optimization, higher energy per transaction.
 
 ### 8. Rating Calculation Algorithm
 
 #### 8.1 Data Collection
-Measure the OPS/Watt, transaction efficiency, and query optimization capability.
+Measure the OPS/Watt-hour, transaction efficiency, and query optimization capability.
 
 #### 8.2 Normalization
 Normalize data against a standard workload for different use cases.
@@ -120,19 +120,19 @@ This document provides an example of how the SCER Specification could be applied
 
 ### Step 1: Data Collection
 
-- ORD: 200 OPS/Watt
-- MiSQL: 180 OPS/Watt
-- MSQL: 150 OPS/Watt
-- PSQL: 170 OPS/Watt
-- IDb: 160 OPS/Watt
+- ORD: 200 OPS/Watt-hour
+- MiSQL: 180 OPS/Watt-hour
+- MSQL: 150 OPS/Watt-hour
+- PSQL: 170 OPS/Watt-hour
+- IDb: 160 OPS/Watt-hour
 
 ### Step 2: Normalization
 
 Data is normalized against a standard workload. For simplicity, let's assume the workload normalizes the data as is.
 
 ### Step 3: Composite Score
-Each DBMS receives a composite score based on OPS/Watt, transaction efficiency, and query optimization. (Note: The other factors are not provided here, so the OPS/Watt will stand in for the composite score in this example.)
-The composite score is assumed to be the OPS/Watt for simplicity.
+Each DBMS receives a composite score based on OPS/Watt-hour, transaction efficiency, and query optimization. (Note: The other factors are not provided here, so the OPS/Watt-hour will stand in for the composite score in this example.)
+The composite score is assumed to be the OPS/Watt-hour for simplicity.
 
 ### Step 4: Ranking
 The software is ranked based on the composite score:
