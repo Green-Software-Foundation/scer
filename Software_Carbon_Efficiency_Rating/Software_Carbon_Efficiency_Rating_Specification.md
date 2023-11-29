@@ -5,9 +5,9 @@
 
 1. [Introduction](#1-introduction)
 2. [Common Components of a SCER Specification](#2-common-components-of-the-scer-specification)
-    1. [Software Categorization](#2.1-software-categorization-considerations)
-    4. [Benchmarking Specification](#2.2-benchmarking-specification)
-    5. [Rating Specification](#2.3-rating-specification)
+    1. [Software Categorization](#21-software-categorization-considerations)
+    4. [Benchmarking Specification](#22-benchmarking-specification)
+    5. [Rating Specification](#23-rating-specification)
 6. [Creating Category-Specific SCER Specifications](#3-creating-category-specific-scer-specifications)
 7. [Appendices](#4-appendices)
 8. [References](#5-references)
