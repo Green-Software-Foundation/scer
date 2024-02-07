@@ -30,15 +30,17 @@ Global trends in energy-efficient computing, open source's role in driving softw
 > * US Government Green Procurement Policies
 * SCER WG aligns with Green Software Foundation's overall goals:
 
-## **Scope and Objectives **
+## **Scope and Objectives**
 Scope: The working group will focus on the following key areas, including the development of a software carbon efficiency rating (SCER) standard:
 * Software Carbon Efficiency Rating (SCER) Standard: Develop a standardized software carbon efficiency rating system that can assess and rate the carbon efficiency of software products. This standard will provide a framework for evaluating and comparing the environmental impact of different software applications, through the inclusion of a benchmark and a rating algorithm which can be used for decision making around carbon-efficiency of the software applications. 
 * Creating a Green Software Certification Lab (GSCL), a standardized testing and certification lab for green software, similar to UL (Underwriters Laboratories) for hardware and electrical systems, involves defining specific criteria, processes, and requirements to evaluate and certify the environmental sustainability and efficiency of software applications. Here is a set of specifications for the lab: Certification Framework, Energy Efficiency, Environmental Impact, Resource Optimization, Power Efficiency, Green Data Management, Renewable Energy Compatibility, Sustainable Development Practices, Certification Levels, etc.
 * Documentation and Guidelines: Create comprehensive documentation and guidelines that detail the carbon-efficient software development process and the SCER rating system. 
 * Community Engagement: blogs and conferences promoting SCER.
+
 ### Future or spin-off objectives:
 * Carbon Efficiency Best Practices: Define a set of best practices for carbon-efficient software development, considering different use cases and scenarios. These practices will cover aspects such as energy-efficient algorithms, resource optimization, and sustainable coding techniques.
 * Badge Program: Establish a software carbon efficiency badge program similar to the OpenSSF's security badge program. Software projects can apply for badges by adhering to both the carbon efficiency best practices.
+
 ## Deliverables:
 * Software Carbon Efficiency Rating (SCER) Standard: Development and publication of a standardized SCER system that can assess and rate the carbon efficiency of software products.
 * Green Software Certification Lab (GSCL): Detailed specification of the lab so that organizations can implement their own labs based on the specification.
