@@ -91,9 +91,9 @@ The following are example tables that can be used for evaluating software catego
 
     In this example, SQLite is a light weight database which is mostly used and deployed in mobile phone platforms that are significantly different from MiSQL and PostgresSQL, so SQLite should not belong in this category, and should not be used for SCER rating in this category.
 
-##### 2.1.2 Optional Components of a Software Categorization
+##### 2.1.2 Extended Components of a Software Categorization
 
-The following aspects may be optional in determining if the software application are in the same category:
+The following aspects may be extended in determining if the software application are in the same category:
 
 - **Type of License:** Differentiating software based on open-source or proprietary status and licensing models.
   - **Open Source vs. Proprietary:** Linux kernel as open-source software vs. Microsoft Windows as proprietary software.
