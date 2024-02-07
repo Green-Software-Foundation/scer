@@ -320,13 +320,19 @@ Different industries may require different ways of benchmarking and rating syste
 
 ---
 
-### 4. Appendices
+### 4. SCER Rating and Labelling
+
+<img width="940" alt="SCER slide 1" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/17365f84-b562-4798-8fcd-db210d45cc43">
+<img width="936" alt="SCER slide 3" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/658f83c8-fcdf-4e4d-a84d-4d20941ae1ef">
+<img width="941" alt="SCER slide 4" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/8c8cdff4-0826-47cc-99dc-b2632acb9f56">
+
+### 5. Appendices
 
 Supporting documents, example calculations, and reporting templates.
 
 ---
 
-### 5. References
+### 6. References
 
 List of references used in the creation of the SCER Specification.
 
