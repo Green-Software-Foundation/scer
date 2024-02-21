@@ -35,7 +35,7 @@ The Software Carbon Efficiency Rating (SCER) Specification is a pioneering frame
   - **SCER**: Software Carbon Efficiency Rating
   - **SCI:** Software Carbon Intensity
 - Structure of the Document: This document is composed of the following major sections:
-  - a section that descrubes the common components of a SCER specification, namely, Software Categorization, Benchmarking, and Rating.
+  - a section that describes the common components of a SCER specification, namely, Software Categorization, Benchmarking, and Rating.
   - a section that provides guidelines to create a category-specific SCER specification based on the above common components.
   - a section that provides an example implementation to demonstrate how to use the guidelines to create a domain-specific SCER specification.
   
