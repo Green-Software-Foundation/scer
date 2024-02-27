@@ -303,7 +303,7 @@ Using the rating scale:
 - Software 5: **C**
 
 
-The final ratings reflect the carbon efficiency of the software applications, with Software 1-3 being average to inefficient, Software 4 above average, and Software 5 being exceptionally efficient.
+The final ratings reflect the carbon efficiency of the software applications, with Software 3-5 being average to inefficient, Software 2 above average, and Software 1 being exceptionally efficient.
 
 In summary, the following table can serve as a template or checklist when rating:
 
