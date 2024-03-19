@@ -246,9 +246,9 @@ $$\ Percentile\ Position = \left( \frac{Rank - 1}{Total\ Number\ of\ Submissions
 ##### 2.3.3 **Rating Example**
 Here is a SCER rating example, where the SCI scores of 5 software applications in the same category are collected. Lower SCI (Software Carbon Intensity) scores indicate higher software carbon efficiency. The rating scale includes labels A through C:
 
-- **A**: Exceptionally efficient (SCI scores above the 90th percentile).
-- **B**: Above average efficiency (SCI scores from the 60th to 90th percentile).
-- **C**: Average to inefficient (SCI scores below the 60th percentile).
+- **A**: Exceptionally efficient (percentile position above the 90th percentile).
+- **B**: Above average efficiency (percentile position from the 60th to 90th percentile).
+- **C**: Average to inefficient (percentile position below the 60th percentile).
 
 **Collected SCI Scores:**
 
@@ -266,13 +266,13 @@ SCI Scores for five software applications have been collected.
 
 ###### Step 2: Ranking
 
-The software applications are ranked by SCI Score, from lowest to highest:
+The software applications are ranked by SCI Score, from highest to lowest:
 
-1. Software 1: 100
-2. Software 2: 150
+1. Software 5: 250
+2. Software 4: 200
 3. Software 3: 160
-4. Software 4: 200
-5. Software 5: 250
+2. Software 2: 150
+1. Software 1: 100
 
 ###### Step 3: Percentile Calculation
 
@@ -280,11 +280,11 @@ Percentile positions are calculated using the formula:
 
 $$\ Percentile\ Position = \left( \frac{Rank - 1}{Total\ Number\ of\ Submissions\ -\ 1} \right) \times 100 \$$
 
-- Software 1: 0%
-- Software 2: 25%
+- Software 5: 0%
+- Software 4: 25%
 - Software 3: 50%
-- Software 4: 75%
-- Software 5: 100%
+- Software 2: 75%
+- Software 1: 100%
 
 ###### Step 4: Rating Assignment
 
@@ -296,14 +296,14 @@ Using the rating scale:
 
 ###### Final Ratings by Efficiency
 
-- Software 5: **A**
-- Software 4: **B**
-- Software 1: **C**
-- Software 2: **C**
+- Software 1: **A**
+- Software 2: **B**
 - Software 3: **C**
+- Software 4: **C**
+- Software 5: **C**
 
 
-The final ratings reflect the carbon efficiency of the software applications, with Software 1-3 being average to inefficient, Software 4 above average, and Software 5 being exceptionally efficient.
+The final ratings reflect the carbon efficiency of the software applications, with Software 3-5 being average to inefficient, Software 2 above average, and Software 1 being exceptionally efficient.
 
 In summary, the following table can serve as a template or checklist when rating:
 
