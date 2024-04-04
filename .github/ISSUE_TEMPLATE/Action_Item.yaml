@@ -1,5 +1,5 @@
 name:  Action Item
-description: Action Item submission
+description: Task to be completed
 title: "[Action Item]"
 labels: ["Action Item"]
 projects: ["Add project"]
