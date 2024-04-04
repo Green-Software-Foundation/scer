@@ -1,5 +1,5 @@
 name:  Question
-description: Question submission
+description: Specification questions
 title: "[Question]"
 labels: ["question"]
 projects: ["Add project"]
