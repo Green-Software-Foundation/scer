@@ -335,13 +335,13 @@ Different industries may require different ways of benchmarking and rating syste
 
 ---
 
-### 5. Appendices
+### 4. Appendices
 
 Supporting documents, example calculations, and reporting templates.
 
 ---
 
-### 6. References
+### 5. References
 
 List of references used in the creation of the SCER Specification.
 
