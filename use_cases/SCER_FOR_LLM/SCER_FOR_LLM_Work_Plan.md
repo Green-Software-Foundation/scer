@@ -10,7 +10,7 @@ Now that the SCER specification is fully developed, there's an apparent gap in i
 
 Recent advancements and policy mandates on AI's energy needs underscore the importance of sustainable practices in AI development. An in-depth analysis of the current energy consumption trends by LLMs is essential. For a comprehensive overview, refer to the study at [NNLabs on Power Requirements of Large Language Models](https://www.nnlabs.org/power-requirements-of-large-language-models/).
  
-[![alt text](image-6.png)](https://www.cbinsights.com/research/report/generative-ai-predictions-2024/)
+[![alt text](./images/image-6.png)](https://www.cbinsights.com/research/report/generative-ai-predictions-2024/)
 
 Source: [CBInsight GenAI Predictions for 2024](https://www.cbinsights.com/research/report/generative-ai-predictions-2024/)
 
@@ -58,14 +58,14 @@ Assessing training and inference separately improves the accuracy of carbon effi
 ### GenAI Life-cycle Environmental Impact
 Here is a great article from [LinkedIn Post on MPG for LLMs](https://www.linkedin.com/pulse/mpg-llms-exploring-energy-efficiency-generative-ai-gamazaychikov/). Here are some brief excerpts:
 
-![alt text](image.png)
+![alt text](./images/image.png)
 
-![alt text](image-3.png)
+![alt text](./images/image-3.png)
 
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
-![alt text](image-4.png)
-![alt text](image-2.png)
+![alt text](./images/image-4.png)
+![alt text](./images/image-2.png)
 
 ### Food for thoughts:
 - **Please note that the LLM's measurements from Huggingface and ML.Energy are measured in Energy Consumption units(tokens/kwh/joules), not CO2e.**
@@ -135,7 +135,7 @@ SCER for LLM proposes a standardized approach to measure and rate the carbon eff
 
 **The Question**: Why carbon efficiency ratings are not part of the evaluation parameter in the most popular LLMs in Hugging Face? Is it because Carbon Efficiencies of LLMs are still not a priority in evaluating LLMs for deployment/applications?
 
-[![alt text](image-7.png)](https://huggingface.co)
+[![alt text](./images/image-7.png)](https://huggingface.co)
 
 ## Goal and Vision of SCER for LLM
 

@@ -3,14 +3,15 @@
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Common Components of a SCER Specification](#2-common-components-of-the-scer-specification)
+- [Introduction](#1-introduction)
+- [Common Components of a SCER Specification](#2-common-components-of-the-scer-specification)
     1. [Software Categorization](#21-software-categorization-considerations)
-    4. [Benchmarking Specification](#22-benchmarking-specification)
-    5. [Rating Specification](#23-rating-specification)
-6. [Creating Category-Specific SCER Specifications](#3-creating-category-specific-scer-specifications)
-7. [Appendices](#4-appendices)
-8. [References](#5-references)
+    2. [Benchmark Specification](#22-benchmarking-specification)
+    3. [Rating Specification](#23-rating-specification)
+    4. [Visualization and Labeling](#24-scer-rating-and-labeling)
+- [Creating Category-Specific SCER Specifications](#3-creating-category-specific-scer-specifications)
+- [Appendices](#4-appendices)
+- [References](#5-references)
 
 ---
 
@@ -319,6 +320,13 @@ In summary, the following table can serve as a template or checklist when rating
 | e.g. A - C, or A, A+, A++, or AAA, etc. Default is A (>90%), B (60-89%),C (< 60%) |e.g. getting data, calculate mean, average etc. | e.g. rating assignment and reporting |
 ---
 
+
+#### 2.4 SCER Rating Visualization and Labeling
+
+<img width="940" alt="SCER slide 1" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/17365f84-b562-4798-8fcd-db210d45cc43">
+<img width="936" alt="SCER slide 3" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/658f83c8-fcdf-4e4d-a84d-4d20941ae1ef">
+<img width="941" alt="SCER slide 4" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/8c8cdff4-0826-47cc-99dc-b2632acb9f56">
+
 ### 3. Creating Category-Specific SCER Specifications
 
 This section describes guidelines for adapting the SCER Specification to specific software categories.
@@ -327,19 +335,13 @@ Different industries may require different ways of benchmarking and rating syste
 
 ---
 
-### 4. SCER Rating and Labelling
-
-<img width="940" alt="SCER slide 1" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/17365f84-b562-4798-8fcd-db210d45cc43">
-<img width="936" alt="SCER slide 3" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/658f83c8-fcdf-4e4d-a84d-4d20941ae1ef">
-<img width="941" alt="SCER slide 4" src="https://github.com/Green-Software-Foundation/scer/assets/58750231/8c8cdff4-0826-47cc-99dc-b2632acb9f56">
-
-### 5. Appendices
+### 4. Appendices
 
 Supporting documents, example calculations, and reporting templates.
 
 ---
 
-### 6. References
+### 5. References
 
 List of references used in the creation of the SCER Specification.
 
