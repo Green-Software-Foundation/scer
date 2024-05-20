@@ -197,6 +197,7 @@ $$\ SCI\ Score = \frac{CO2e\ emissions}{USF} \$$
 
 Where CO2e emissions are measured in kilograms and USF is determined by the benchmark test.
 
+Default measurement is in SCI but other metrics can be used to base the SCER rating, such as kWh, SCC, SCI, CO2e, etc. 
 
 ##### 2.2.5 Test Environment
 
