@@ -90,8 +90,9 @@ Visuals and labeling are crucial elements of the specification because a key obj
 - Currently, Hugging Face presents an extensive array of data for LLM benchmark results. The challenge lies in the usability of this raw data. Finding ways to simplify and clarify this vast amount of information to assist users in making informed decisions presents a significant opportunity for enhancement.
 - It seems that there is a trade-off between carbon efficiency and performance efficiency in large language models (LLMs). More accurate and high-performing LLMs, which often have billions of parameters, inherently require more energy for training and inference.
 - An effective strategy to reconcile performance with carbon efficiency could involve developing smaller, domain-specific LLMs. These models would be more carbon-efficient due to their reduced size but would remain highly performant and accurate by training exclusively on domain-specific data. This approach allows for maintaining the utility of large models where necessary, while also providing an option that requires less energy. Additionally, it suggests that such models should be evaluated and rated using distinct benchmarks tailored to their specific categories.
-
-### 6. References
+### 6. Potential Beneficiaries of Adopting SCER for LLMs Specification
+Any orgnization that evaluates or distributes LLMs (AI models) internally or externally can benefit from adopting the SCER for LLMs specification, because measurable sustainability is becoming a key value proposition and competitive advantage in fast moving AI space.
+### 7. References
 
 ### Sample Illustrations of SCER Rating - Visualization and Labeling
 
@@ -128,3 +129,4 @@ LEED provides a framework for healthy, efficient, and cost-saving green building
 
 To achieve LEED certification, a project earns points by adhering to prerequisites and credits that address carbon, energy, water, waste, transportation, materials, health and indoor environmental quality. Projects go through a verification and review process by GBCI and are awarded points that correspond to a level of LEED certification: **Certified (40-49 points), Silver (50-59 points), Gold (60-79 points) and Platinum (80+ points)**.
 ![](https://graconllc.com/wp-content/uploads/2017/08/leed-certification-levels.jpg)
+
