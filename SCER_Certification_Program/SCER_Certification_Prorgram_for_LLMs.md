@@ -1,7 +1,7 @@
 ### SCER Certification Program for LLMs
 
 **Introduction:**
-The SCER (Sustainable Carbon Efficiency Rating) certification program for Large Language Models (LLMs) aims to promote transparency, accountability, and environmental responsibility in the development and deployment of AI technologies. The program is inspired by successful initiatives like [NutriScore](https://www.santepubliquefrance.fr/en/nutri-score) and [Energy Star](https://www.energystar.gov/), providing a clear and standardized framework for assessing and communicating the carbon efficiency of LLMs.
+The SCER (Software Carbon Efficiency Rating) certification program for Large Language Models (LLMs) aims to promote transparency, accountability, and environmental responsibility in the development and deployment of AI technologies. The program is inspired by successful initiatives like [NutriScore](https://www.santepubliquefrance.fr/en/nutri-score) and [Energy Star](https://www.energystar.gov/), providing a clear and standardized framework for assessing and communicating the carbon efficiency of LLMs.
 
 **Certification Levels:**
 The SCER certification program has two levels:
