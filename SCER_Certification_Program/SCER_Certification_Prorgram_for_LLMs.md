@@ -28,7 +28,7 @@ The SCER certification program has two levels:
    - **Instructions:**
      1. Use the SCER for LLMs process to obtain a carbon efficiency rating.
      2. Display the rating on the relevant products and services.
-     3. Report usage and rating to the [SCER WG in GSF](Reporting.md).
+     3. Report usage and conformance to the [SCER WG in GSF](Reporting.md).
    - **Outcome:** Organizations meeting these criteria are granted the right to display the SCER Rating label on their products or services.
    - **Label:** 
 
@@ -37,11 +37,11 @@ The SCER certification program has two levels:
       (Experimental label image)
 
 **Reporting Requirements:**
-- Both certification levels require organizations to report their usage and conformance or rating to the SCER WG in the GSF.
+- Both certification levels require organizations to report their usage and conformance to the SCER WG in the GSF.
 - Organizations are encouraged to voluntarily report any changes when their conformance status is altered.
 
 **Standards and Compliance:**
-- SCER standards are periodically reviewed and updated to reflect technological advancements and market changes, ensuring the label remains a mark of high carbon efficiency.
+- SCER standards are periodically reviewed and updated to reflect technological advancements and market changes, ensuring the label remains a mark of best practices for high carbon efficiency.
 - The SCER WG monitors compliance through ongoing testing and market surveillance.
 - Products or services found to be non-compliant can have their certification revoked.
 
