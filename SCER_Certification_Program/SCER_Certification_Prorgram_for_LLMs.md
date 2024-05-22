@@ -6,7 +6,7 @@ The SCER (Software Carbon Efficiency Rating) certification program for Large Lan
 **Certification Levels:**
 The SCER certification program has two levels:
 
-1. **SCER Process Conformance Certification Program**
+**Level 1. SCER Process Conformance Certification**
    - **Description:** This certification level ensures that organizations adhere to the SCER standardized framework and complete the four-step process.
    - **Instructions:**
      1. Complete the four-step process outlined by [SCER for LLMs](https://github.com/chrisxie-fw/scer/blob/Dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md):
@@ -23,7 +23,7 @@ The SCER certification program has two levels:
    
       (Experimental label image)
    
-2. **SCER Rating Certification Program**
+**Level 2. SCER Rating Certification**
    - **Description:** This certification level assesses the actual carbon efficiency rating of the LLMs and provides a rating based on the SCER framework. Achieving this certification also implies compliance with the Level 1 SCER Process Conformance Certification.
    - **Instructions:**
      1. Use the SCER for LLMs process to obtain a carbon efficiency rating.
