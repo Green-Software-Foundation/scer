@@ -85,18 +85,18 @@ Visuals and labeling are crucial elements of the specification because a key obj
 - **User Access and Transparency**
   - Ensure that the labels are easily accessible and understandable to users, providing detailed explanations of the ratings through tooltips or supplementary guides.
 
-## Observations:
+## Observations
 ### Gaps, Opportunities, and Observations
     
 - Currently, Hugging Face presents an extensive array of data for LLM benchmark results. The challenge lies in the usability of this raw data. Finding ways to simplify and clarify this vast amount of information to assist users in making informed decisions presents a significant opportunity for enhancement.
 - It seems that there is a trade-off between carbon efficiency and performance efficiency in large language models (LLMs). More accurate and high-performing LLMs, which often have billions of parameters, inherently require more energy for training and inference.
 - An effective strategy to reconcile performance with carbon efficiency could involve developing smaller, domain-specific LLMs. These models would be more carbon-efficient due to their reduced size but would remain highly performant and accurate by training exclusively on domain-specific data. This approach allows for maintaining the utility of large models where necessary, while also providing an option that requires less energy. Additionally, it suggests that such models should be evaluated and rated using distinct benchmarks tailored to their specific categories.
 ### Potential Beneficiaries of Adopting SCER for LLMs Specification
-Any orgnization that evaluates or distributes LLMs (AI models) internally or externally can benefit from adopting the SCER for LLMs specification, because measurable sustainability is becoming a key value proposition and competitive advantage in fast moving AI space.
+Any organization that evaluates or distributes LLMs (AI models) internally or externally can benefit from adopting the SCER for LLMs specification, because SCER specification and its certification enhance credibility, ensure regulatory compliance, attract sustainability-conscious consumers and stakeholders, and boost brand recognition.
 
-Governments and standard-setting bodies (SDOs) can greatly benefit from adopting the SCER for LLMs specification. For governments, these standards ensure industry-wide adherence to best practices for achieving high carbon efficiency in AI models used in public services and the broader industry, aligning with national and international sustainability goals. They also aid in regulatory oversight, enabling more effective monitoring and enforcement of sustainability practices in AI development.
+Governments and standard-setting bodies (SDOs) can greatly benefit from adopting the SCER for LLMs specification. For governments, these standards ensure industry-wide adherence to best practices in carbon efficiency for AI models used in public services and the broader industry, aligning with national and international sustainability goals. They also aid in regulatory oversight, enabling more effective monitoring and enforcement of sustainability practices in AI development.
 
-For standard-setting bodies, the SCER specification offers a clear and consistent framework for evaluating the sustainability of LLMs, promoting uniformity and comparability across the industry. This facilitates the development of robust certification programs like the SCER Certification Program, enhances industry-wide carbon-efficient best practices, and drives innovation in sustainable AI technologies.
+For SDOs, the SCER for LLMs specification offers a clear and consistent framework for evaluating the sustainability of LLMs, promoting uniformity and comparability across the industry. This facilitates the development of robust certification programs like the SCER Certification Program, enhances industry-wide carbon-efficient best practices, and drives innovation in sustainable AI technologies.
 
 ## References
 
