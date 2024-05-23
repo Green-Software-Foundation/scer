@@ -127,12 +127,15 @@ The Nutri-Score is calculated per 100g or 100ml. The goal of the Nutri-Score is 
 [**Energy Guide:**](https://consumer.ftc.gov/articles/how-use-energyguide-label-shop-home-appliances) 
 The Energy Guide label is a prominent yellow label found on many home appliances. It provides consumers with essential information about the appliance’s energy consumption and efficiency, allowing them to compare the energy use of different models. The label includes estimates of annual energy use, operating costs, and how the appliance compares to similar models in terms of energy efficiency.
 
-![Energy Guide](https://consumer.ftc.gov/sites/default/files/consumer_ftc_gov/images/sample3-dishwasher-032022_yellow.png)
+<img width="440" alt="Energy Guide" src="https://consumer.ftc.gov/sites/default/files/consumer_ftc_gov/images/sample3-dishwasher-032022_yellow.png">
+
 
 [**Energy Star:**](https://www.energystar.gov/)
 Energy Star is a government-backed program and symbol for energy efficiency, managed by the U.S. Environmental Protection Agency (EPA). Products that earn the Energy Star label meet strict energy efficiency criteria set by the EPA, helping consumers save money on energy bills while reducing their environmental impact. Energy Star covers a wide range of products, including appliances, electronics, heating and cooling systems, and even entire buildings.
 
-![EnergyStar](https://consumer.ftc.gov/sites/default/files/consumer_ftc_gov/images/sample3-dishwasher-032022_yellow.png)
+
+<img width="440" alt="EnergyStar" src="https://en.wikipedia.org/wiki/Energy_Star#/media/File:Energy_Star_logo.svg">
+
 
 ### CDP:
 [CDP](https://www.cdp.net/en/info/about-us) (formerly Carbon Disclosure Project): A global disclosure system for companies, cities, states, and regions to manage their environmental impacts.
