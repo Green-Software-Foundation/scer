@@ -2,13 +2,13 @@
 
 **Motivation and Value Statement for the SCER Specification for LLMs:**
 
-The SCER (Software Carbon Efficiency Rating) specification provides a crucial framework designed to standardize the assessment and comparison of software applications based on their carbon efficiencies. Without an industry-standard approach to measure the environmental impact of software, there is currently no systematic method to assess or compare the "greenness" of software relative to similar applications within the same category. By adopting this specification, software "greenness" is established and recognized as a key performance indicator (KPI) in the evaluation of software solutions. This not only facilitates a competitive environment focused on sustainability but also propels the broader agenda of sustainable software development, aligning with global environmental goals.
+The SCER (Software Carbon Efficiency Rating) specification, pronounced “sheer”,  provides a crucial framework designed to standardize the assessment and comparison of software applications based on their carbon efficiencies. Without an industry-standard approach to measure the environmental impact of software, there is currently no systematic method to assess or compare the "greenness" of software relative to similar applications within the same category. By adopting this specification, software "greenness" is established and recognized as a key performance indicator (KPI) in the evaluation of software solutions. This not only promotes a focus on sustainability but also advances the broader agenda of sustainable software development, aligning with global environmental goals.
 
 The SCER Specification for Rating  Carbon Efficiencies of LLMs  serves as a practical application for [the foundational SCER specification](https://github.com/Green-Software-Foundation/scer/blob/Dev/Software_Carbon_Efficiency_Rating/Software_Carbon_Efficiency_Rating_Specification.md). Following the standard process outlined in the SCER specification, the components detailed below are designed to assess the carbon efficiencies of LLMs:
-1. Software Categorization
-1. Benchmark definition (workload, method etc)
+1. Software Categorization (model size, types, etc)
+1. Benchmark definition (workload, method, tools/infra, etc)
 1. Rating definition (range, algorithm, etc)
-1. Visualization and Labeling (on Hugging Face, or MLPerf-like)
+1. Visualization and Labeling (visuals, placement, access to sources/details, etc)
 
 ---
 Below, each component of the specification is defined in detail, using Hugging Face as a case study or example.
@@ -42,7 +42,7 @@ Below, each component of the specification is defined in detail, using Hugging F
   [![alt text](./images/tokensless.png)](https://huggingface.co/spaces/optimum/llm-perf-leaderboard)
   - CodeCarbon does provide CO2e information, in addition to kWh:[![alt text](./images/cc.jpg)](https://codecarbon.io/)
 - **Tooling and Infrastructure**
-  - Specify required tools or platforms for conducting benchmarks to ensure reproducibility and transparency in the testing process.
+  - Specify required tools or platforms for conducting benchmarks to ensure *reproducibility* and transparency in the testing process.
   - From Hugging Face [LLM-Perf Leaderboard](https://huggingface.co/spaces/optimum/llm-perf-leaderboard): 
     - Hardware: [H100 80GB 350W](https://www.amazon.com/NVIDIA-Graphic-Memory-900-21010-0000-000-Warraty/dp/B0C957FN64?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3LRS18WTQPMZ4), [A100 80GB 275W](https://www.cdw.com/product/pny-nvidia-a100-80gb-pcie-gen-4-graphic-card/7065275), and [RTX4090-24GB-450W](https://www.bestbuy.com/site/nvidia-geforce-rtx-4090-24gb-gddr6x-graphics-card-titanium-black/6521430.p?skuId=6521430) are the GPU hardware used in the benchmark infrastructure
     - Software: 
@@ -53,7 +53,7 @@ Below, each component of the specification is defined in detail, using Hugging F
 
 ### 3. Rating Definition
 - **Efficiency Range**
-  - Determine what constitutes low, medium, and high efficiency based on carbon output per unit of computational output (e.g., carbon per 1,000 tokens/words generated).
+  - Determine what constitutes low, medium, and high efficiency based on carbon output per unit of computational output or per unit of software function (USF), e.g. carbon per 1,000 tokens/words generated.
   - *LLM Performance Efficiency*: Hugging Face uses the average score of 6 performance benchmark results, in the range of 0 to 100:
   [![alt text](./images/average_score.png)](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
   - *LLM Energy Efficiency*: measured in ''tokens/kWh''. Hugging Face uses CodeCarbon to get energy consumed number in kWh, which is then divided by the number of tokens generated, as shown here:
@@ -81,17 +81,24 @@ Visuals and labeling are crucial elements of the specification because a key obj
 - **Design of Labels**
   - Create visually distinctive labels that clearly communicate the carbon efficiency rating of an LLM, similar to energy efficiency labels on appliances.
 - **Integration Points**
-  - Specify how these labels will be integrated and displayed on platforms like Hugging Face or benchmarks like MLPerf.
+  - Specify how these labels will be integrated and displayed on platforms like Hugging Face or benchmarks like MLPerf, or if the rating is for an organization's internal consumption, choose an appropriate integration point.
 - **User Access and Transparency**
   - Ensure that the labels are easily accessible and understandable to users, providing detailed explanations of the ratings through tooltips or supplementary guides.
 
-### 5. Gaps, Opportunities, and Observations
+## Observations
+### Gaps, Opportunities, and Observations
     
 - Currently, Hugging Face presents an extensive array of data for LLM benchmark results. The challenge lies in the usability of this raw data. Finding ways to simplify and clarify this vast amount of information to assist users in making informed decisions presents a significant opportunity for enhancement.
 - It seems that there is a trade-off between carbon efficiency and performance efficiency in large language models (LLMs). More accurate and high-performing LLMs, which often have billions of parameters, inherently require more energy for training and inference.
 - An effective strategy to reconcile performance with carbon efficiency could involve developing smaller, domain-specific LLMs. These models would be more carbon-efficient due to their reduced size but would remain highly performant and accurate by training exclusively on domain-specific data. This approach allows for maintaining the utility of large models where necessary, while also providing an option that requires less energy. Additionally, it suggests that such models should be evaluated and rated using distinct benchmarks tailored to their specific categories.
+### Potential Beneficiaries of Adopting SCER for LLMs Specification
+Any organization that evaluates or distributes LLMs (AI models) internally or externally can benefit from adopting the SCER for LLMs specification, because SCER specification and its certification enhance credibility, ensure regulatory compliance, attract sustainability-conscious consumers and stakeholders, and boost brand recognition.
 
-### 6. References
+Governments and standard-setting bodies (SDOs) can greatly benefit from adopting the SCER for LLMs specification. For governments, these standards ensure industry-wide adherence to best practices in carbon efficiency for AI models used in public services and the broader industry, aligning with national and international sustainability goals. They also aid in regulatory oversight, enabling more effective monitoring and enforcement of sustainability practices in AI development.
+
+For SDOs, the SCER for LLMs specification offers a clear and consistent framework for evaluating the sustainability of LLMs, promoting uniformity and comparability across the industry. This facilitates the development of robust certification programs like the SCER Certification Program, enhances industry-wide carbon-efficient best practices, and drives innovation in sustainable AI technologies.
+
+## References
 
 ### Sample Illustrations of SCER Rating - Visualization and Labeling
 
@@ -114,6 +121,22 @@ The Nutri-Score is calculated per 100g or 100ml. The goal of the Nutri-Score is 
 
 ![Nutri-Score](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaSK-xId-y3XF350rY_AtSc0BltkUEcAQrv7AOEiBnQ1i2w97nXNP5PcYidfHqlARDwTo&usqp=CAU)
 
+### Energy Guide and EnergyStar
+
+
+[**Energy Guide:**](https://consumer.ftc.gov/articles/how-use-energyguide-label-shop-home-appliances) 
+The Energy Guide label is a prominent yellow label found on many home appliances. It provides consumers with essential information about the appliance’s energy consumption and efficiency, allowing them to compare the energy use of different models. The label includes estimates of annual energy use, operating costs, and how the appliance compares to similar models in terms of energy efficiency.
+
+<img width="440" alt="Energy Guide" src="https://consumer.ftc.gov/sites/default/files/consumer_ftc_gov/images/sample3-dishwasher-032022_yellow.png">
+
+
+[**Energy Star:**](https://www.energystar.gov/)
+Energy Star is a government-backed program and symbol for energy efficiency, managed by the U.S. Environmental Protection Agency (EPA). Products that earn the Energy Star label meet strict energy efficiency criteria set by the EPA, helping consumers save money on energy bills while reducing their environmental impact. Energy Star covers a wide range of products, including appliances, electronics, heating and cooling systems, and even entire buildings.
+
+
+<img width="440" alt="EnergyStar" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Energy_Star_logo.svg">
+
+
 ### CDP:
 [CDP](https://www.cdp.net/en/info/about-us) (formerly Carbon Disclosure Project): A global disclosure system for companies, cities, states, and regions to manage their environmental impacts.
 - Data collection as a form of company disclosure: CDP provides guide that covers the key steps to disclose as a company including setting up a CDP account, responding to the CDP questionnaire(s), and receiving a CDP score. 
@@ -128,3 +151,4 @@ LEED provides a framework for healthy, efficient, and cost-saving green building
 
 To achieve LEED certification, a project earns points by adhering to prerequisites and credits that address carbon, energy, water, waste, transportation, materials, health and indoor environmental quality. Projects go through a verification and review process by GBCI and are awarded points that correspond to a level of LEED certification: **Certified (40-49 points), Silver (50-59 points), Gold (60-79 points) and Platinum (80+ points)**.
 ![](https://graconllc.com/wp-content/uploads/2017/08/leed-certification-levels.jpg)
+
