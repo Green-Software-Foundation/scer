@@ -134,7 +134,7 @@ The Energy Guide label is a prominent yellow label found on many home appliances
 Energy Star is a government-backed program and symbol for energy efficiency, managed by the U.S. Environmental Protection Agency (EPA). Products that earn the Energy Star label meet strict energy efficiency criteria set by the EPA, helping consumers save money on energy bills while reducing their environmental impact. Energy Star covers a wide range of products, including appliances, electronics, heating and cooling systems, and even entire buildings.
 
 
-<img width="440" alt="EnergyStar" src="https://en.wikipedia.org/wiki/Energy_Star#/media/File:Energy_Star_logo.svg">
+<img width="440" alt="EnergyStar" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Energy_Star_logo.svg">
 
 
 ### CDP:
