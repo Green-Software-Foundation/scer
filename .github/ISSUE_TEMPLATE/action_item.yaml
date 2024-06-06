@@ -4,8 +4,8 @@ title: "[AI]"
 labels: ["Action Item"]
 projects: ["SCER"]
 assignees: 
-- sk16-dev
-- chrisxie-fw
+  - sk16-dev
+  - chrisxie-fw
 
 body:
   - type: textarea
