@@ -19,7 +19,7 @@ The SCER certification program has two levels:
    - **Outcome:** Organizations meeting these criteria are granted the right to display the SCER Process Conformance label on their products or services.
    - **Label:** 
    
-      <img src="./images/SCER_Label.webp" alt="drawing" width="150"/>
+      <img src="./images/scer_process_conformance.png" alt="drawing" width="200"/>
    
       (Experimental label image)
    
@@ -32,7 +32,7 @@ The SCER certification program has two levels:
    - **Outcome:** Organizations meeting these criteria are granted the right to display the SCER Rating label on their products or services.
    - **Label:** 
 
-      <img src="./images/SCER_Rating_Label.webp" alt="drawing" width="100"/>
+      <img src="./images/scer_rating_conformance.png" alt="drawing" width="220"/>
       
       (Experimental label image)
 
