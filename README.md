@@ -1,4 +1,4 @@
-# [Software Carbon Efficiency Rating](https://github.com/Green-Software-Foundation/scer#software-carbon-efficiency-rating-scer)
+# [Software Carbon Efficiency Rating](https://wiki.greensoftware.foundation/governance/projects/software-carbon-efficiency-rating)
 
 ## Project overview
 - [Google Doc](https://docs.google.com/document/d/19ymiN4EXYNayt7Ie_jIY48spJVBOtqkxwPApRjna4yw/edit) project drafting doc
