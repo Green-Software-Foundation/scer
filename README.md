@@ -6,22 +6,22 @@ Created and managed by the [Standards Working Group](https://github.com/Green-So
 ### Introduction
 As digital transformation accelerates, the role of software in global carbon emissions has become more significant, necessitating the development of standard methodologies to assess and mitigate the environmental impact of software:
 
-The Rising Carbon Footprint of Software: The digitization of nearly every aspect of modern life has led to a surge in demand for software solutions, subsequently increasing the IT sector's energy consumption and carbon emissions.
+- The Rising Carbon Footprint of Software: The digitization of nearly every aspect of modern life has led to a surge in demand for software solutions, subsequently increasing the IT sector's energy consumption and carbon emissions.
 
-The Need for a Unified Approach: Currently, the lack of a standardized system for measuring and comparing the carbon efficiency of software products hinders effective management and reduction of carbon footprints across the industry.
+- The Need for a Unified Approach: Currently, the lack of a standardized system for measuring and comparing the carbon efficiency of software products hinders effective management and reduction of carbon footprints across the industry.
 
 The Software Carbon Efficiency Rating (SCER) Specification is a pioneering framework designed to address the increasing concerns related to the carbon footprint of software. It serves as a generic framework for evaluating software carbon efficiency, and it can be further refined and adapted to create nuanced, category-specific carbon efficiency ratings:
 
-Aim and Scope: This specification aims to introduce a consistent, transparent, and scalable approach to carbon efficiency evaluation. It defines the scope of the SCER Specification, detailing its applicability to various software types and the expected outcomes of its implementation.
+- Aim and Scope: This specification aims to introduce a consistent, transparent, and scalable approach to carbon efficiency evaluation. It defines the scope of the SCER Specification, detailing its applicability to various software types and the expected outcomes of its implementation.
 
-Target Audience: This specification is intended for a broad audience encompassing software developers, IT professionals, policy-makers, and business leaders who are directly or indirectly involved in the creation, deployment, and use of software.
+- Target Audience: This specification is intended for a broad audience encompassing software developers, IT professionals, policy-makers, and business leaders who are directly or indirectly involved in the creation, deployment, and use of software.
 
 **Terminology:**
 
-USF: Unit of Software Function
+- USF: Unit of Software Function
 Carbon Efficiency: The amount of carbon dioxide equivalent (CO2e) emitted per USF.
-SCER: Software Carbon Efficiency Rating
-SCI: Software Carbon Intensity
+- SCER: Software Carbon Efficiency Rating
+- SCI: Software Carbon Intensity
 
 ### Scope and Objectives
 * Software Carbon Efficiency Rating (SCER) Standard: Develop a standardized software carbon efficiency rating system that can assess and rate the carbon efficiency of software products. This standard will provide a framework for evaluating and comparing the environmental impact of different software applications by including a benchmark and a rating algorithm that can be used for decision-making around software applications' carbon efficiency. 
