@@ -1,1 +1,2 @@
 Place holder
+- [Advancing Responsible AI: Unveiling the Software Carbon Efficiency Rating (SCER) for AI Models (PDF and Youtube Video)](https://aideveu24.sched.com/event/1c1lg?iframe=no) at LF AI_dev: Open Source GenAI & ML Summit Europe 2024
