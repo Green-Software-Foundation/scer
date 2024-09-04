@@ -1,5 +1,5 @@
 > [!important]
-> **Draft Project**: This is a draft document only and has not been approved or adopted by the Green Software Foundation. This draft may not be relied upon for any purpose other than review of the current state of development.
+> # **Draft Project**: This is a draft document only and has not been approved or adopted by the Green Software Foundation. This draft may not be relied upon for any purpose other than review of the current state of development.
 
 Created and managed by the [Standards Working Group](https://github.com/Green-Software-Foundation/standards_wg) in the [greensoftware.foundation](https://greensoftware.foundation).
 
