@@ -31,7 +31,13 @@ This specification is intended for a broad audience involved in the creation, de
 ## Normative references
 
 ISO/IEC 21031:2024
-Information technology — Software Carbon Intensity (SCI) specification
+Information technology — Software Carbon Intensity (SCI) specification.
+
+ISO/IEC 40500
+Information technology — W3C Web Content Accessibility Guidelines (WCAG) 2.0.
+
+ISO/IEC 18004:2024
+Information technology — Automatic identification and data capture techniques — QR code bar code symbology specification.
 
 ## Terms and definitions
 
@@ -41,6 +47,8 @@ ISO and IEC maintain terminological databases for use in standardization at the 
 - ISO Online browsing platform: available at https://www.iso.org/obp
 - IEC Electropedia: available at http://www.electropedia.org/
 
+> [!NOTE]
+> TODO: Update these definitions
 
 - Software Application: TBD
 - Software Carbon Efficiency: TBD
@@ -52,10 +60,14 @@ ISO and IEC maintain terminological databases for use in standardization at the 
 
 
 The following abbreviations are used throughout this specification:
+
+> [!NOTE]
+> TODO: Update these abbreviations
 - SCI
 - SCER
 
-> NOTE: For ease of ref, removed in final spec.
+> [!NOTE] 
+> For ease of ref, removed in final spec.
 > - Requirements – shall, shall not
 > - Recommendations – should, should not
 > - Permission – may, need not
@@ -64,7 +76,7 @@ The following abbreviations are used throughout this specification:
 ## Core Requirements
 
 ### Ease of understanding
-A label that is hard to understand or requires expertise not available to most software consumers would defeat the purpose of adding transparency and clarity.
+A label that is hard to understand or requires expertise unavailable to most software consumers would defeat the purpose of adding transparency and clarity.
 
 So, the SCER shall use common terms on the label instead of more scientific terminology. 
 
@@ -73,15 +85,15 @@ Common terms and their scientific equivalent Shall be defined clearly in the SCE
 SCER labels shall be uncluttered and have a clear and simple design that Shall be easily understood.
 
 ### Ease of Verification
-The SCER label Shall make it easy for a consumer of a software application to be able to verify any claims made.
+The SCER label Shall make it easy for a consumer of a software application to verify any claims made.
 
-Consumers should have all the information they need in order to verify any claims made in the label and to ensure the undering calcualtion methodology or any related specification have been followed accurately.
+Consumers should have all the information they need to verify any claims made on the label and to ensure the underlying calculation methodology or any related specification has been followed accurately.
 
 ### Accessible
-The SCER label and format shall be accessible to and meet accessibilty specifications
+The SCER label and format shall be accessible to and meet accessibility specifications.
 
 ### Language
-The SCER label Should be written using the Engline language and alphabet, understanding the SCER label should not require you to learn another language.
+The SCER label Should be written using the English language and alphabet.
     
 ## Calculation Methodology
 
@@ -89,7 +101,7 @@ The SCI shall be used as the calculation methodology for the SCER label.
 
 Any computation of a SCI score for the SCER label SHALL adhere to all requirements of the SCI specification.
  
-> Note: SCI is a Software Carbon Efficiency Specification which is computed a "Carbon per Functional Unit" of a software product. For example, Carbon per Prompt for a Large Language Model.
+> Note: SCI is a Software Carbon Efficiency Specification computed as a "Carbon per Functional Unit" of a software product. For example, Carbon per Prompt for a Large Language Model.
 
 ## Presentation Guidelines
 
@@ -106,64 +118,66 @@ The presentation of the SCI score Shall follow this template
 - Where `[Functional Unit]` is text describing the Functional Unit as defined in the SCI calculation for this software application
     
 ### SCI Version
-This Should be clearly visiible even at small sizes.
+The SCI version Should be visible, even in small sizes.
 
-This Shall be describe which version of the SCI specification that this SCER label complies with and have the format:
+The SCI version Shall describe which version of the SCI specification this SCER label complies with and have the following format:
 
 `[Short Name] [Version]`
 
-- Where `[Short Name]` is the abreviated version of the SCI specification this SCER label is representing
-- Where `[Version]` is the official version of the SCI specification this label is refereing to.
+- Where `[Short Name]` is the abbreviated version of the SCI specification this SCER label is representing
+- Where `[Version]` is the official SCI specification version this label refers to.
 
 For example:
 - `SCI 1.1`
 - `SCI AI 1.0`
 
 ### QR Code
-This Shall be a URL represented as a QR code as per ISO (?? What's the ISO for QR?)
+The QR Code Shall be a URL represented as a QR code as per ISO/IEC 18004:2024
 
-The URL Shall point to a publicly accessible website where you can download a manifest file that meets the requrements in the *Supporting Evidence Section*
+The URL Shall point to a publicly accessible website where you can download a manifest file that meets the requirements in the *Supporting Evidence Section*
 
-The URL Shall Not require a login, it Shall be publicly accessible by anonymous users or non-human automated bots/scripts.
+The URL Shall Not require a login, and it Shall be publicly accessible by anonymous users or non-human automated bots/scripts.
 
 ## Display Requirements
-> TBD, notes for expansion later.
 
-The SCER Label Shall coform to this layout: 
+The SCER Label Shall conform to this layout: 
 
-- Color: Black and White
+> [!NOTE]
+> TODO: Update with an image of the label and any written display guidance.
+
+- Color: ??
 - Size: ??
 - Placement: ??
 - Font: ??
 - Example: ??
 
 ## Supporting Evidence
-As per the presentation guidelines the SCER label will point towards a manifest file that provides the evidence to support any claims made in the label.
+Per the presentation guidelines, the SCER label will link to a manifest file that provides evidence to support any claims made on the label.
 
-The manifest file Shall meet 3 criteria to pass as supporting evidence.
+The manifest file Shall meet three criteria to pass as supporting evidence.
 
 ### Conformance
 Evidence that the underlying SCI requirements have been met in the computation of the SCI score.
 
-The Manifest File Shall clearly describe the Software Boundary as per the SCI specification.
+The Manifest File Shall clearly describe the Software Boundary per the SCI specification.
 
-The Manifest File Shall be follow the Impact Manifest Protocol Standard for communicating environemtnal impacts.
+The Manifest File Shall follow the Impact Manifest Protocol Standard for communicating environmental impacts.
 
-The Manifest File Should use granular data inline with SCI recommendations.
+The Manifest File should use granular data that aligns with SCI recommendations.
 
 ### Correctness
-Correctness is the act of confirming the numbers in the manifest file match the information on the SCER label.
+Correctness is confirming the numbers in the manifest file match the information on the SCER label.
 
-The Manifest File Shall have an aggregate value for the SCI score which matches the reported Score in the SCER label.
+The Manifest File shall have an aggregate value for the SCI score that matches the reported score on the SCER label.
 
-The Manifest File Shall have a Functional Unit which matches the reported Functional Unit in the SCER label.
+The Manifest File shall have a Functional Unit that matches the reported Functional Unit on the SCER label.
 
 ### Verification
 Verification is the act of confirming the evidence supports the claim.
 
 Verification of a SCER label Shall be possible using open source software and open data.
 
-Verification Shall be free for the end user and Shall Not require the purchasing of licenses for software or data or the logging into external systems.
+Verification Shall be free for the end user and Shall Not require purchasing licenses for software or data or logging into external systems.
 
 If Verification requires access to data, that data Shall also be publicly available and free to use. 
 
