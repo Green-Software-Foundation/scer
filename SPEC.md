@@ -78,10 +78,6 @@ The following abbreviations are used throughout this specification:
 ### Ease of understanding
 A label that is hard to understand or requires expertise unavailable to most software consumers would defeat the purpose of adding transparency and clarity.
 
-So, the SCER shall use common terms on the label instead of more scientific terminology. 
-
-Common terms and their scientific equivalent Shall be defined clearly in the SCER specification to avoid interpretation risks.
-
 SCER labels shall be uncluttered and have a clear and simple design that Shall be easily understood.
 
 ### Ease of Verification
@@ -101,7 +97,7 @@ The SCI shall be used as the calculation methodology for the SCER label.
 
 Any computation of a SCI score for the SCER label SHALL adhere to all requirements of the SCI specification.
  
-> Note: SCI is a Software Carbon Efficiency Specification computed as a "Carbon per Functional Unit" of a software product. For example, Carbon per Prompt for a Large Language Model.
+> Note: SCI is a Software Carbon Efficiency Specification computed as an "Carbon per Functional Unit" of a software product. For example, Carbon per Prompt for a Large Language Model.
 
 ## Presentation Guidelines
 
@@ -110,7 +106,7 @@ Components of a SCER Label
 ### SCI Score:
 The presentation of the SCI score Shall follow this template
 
-`[Decimal Value] Carbon per [Functional Unit]`
+`[Decimal Value] gCO2eq per [Functional Unit]`
   
 - Where `[Decimal Value]` is the SCI score itself
 - Where the common term `Carbon` Shall be used to represent the more technical term `CO2e` (Carbon Dioxide Equivalent)
