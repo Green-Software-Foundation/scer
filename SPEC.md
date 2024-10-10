@@ -5,6 +5,7 @@ version: 0.0.1
 
 ## Introduction
 
+
 In the context of global digital transformation, the role of software in contributing to carbon emissions has become increasingly significant. This necessitates the development of standardized methodologies for assessing the environmental impact of software systems.
 
 Rationale:
@@ -139,7 +140,9 @@ The URL Shall Not require a login, and it Shall be publicly accessible by anonym
 The SCER Label Shall conform to this layout: 
 
 > [!NOTE]
-> TODO: Update with an image of the label and any written display guidance.
+> This is a WIP, the current design doesn't meet size flexibilty requirements.
+![image](https://github.com/user-attachments/assets/d5dc4b38-c31f-4624-a3a8-b064744e9f42)
+
 
 - Color: ??
 - Size: ??
