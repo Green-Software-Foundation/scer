@@ -39,7 +39,7 @@ Carbon Efficiency: The amount of carbon dioxide equivalent (CO2e) emitted per US
 
 ### Meeting Details
 - Bi-weekly on a Wednesday @ 09:00 PT / 1700 BST
-- [Become a member](https://wiki.greensoftware.foundation/orientation/signup)
+- [Become a member](https://wiki.greensoftware.foundation/register)
 
 ### Software Carbon Efficiency Rating
 - [Current baseline](https://github.com/Green-Software-Foundation/scer)
