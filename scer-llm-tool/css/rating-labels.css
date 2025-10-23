@@ -1,0 +1,391 @@
+/* SCER Rating Labels - A-E Scale Similar to Nutri-Score */
+
+.scer-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.scer-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.scer-badge:hover::before {
+    opacity: 1;
+    animation: shine 0.5s ease-in-out;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.scer-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* SCER Rating Colors - Based on Efficiency Scale */
+
+/* A Rating - Excellent (≥2500 tokens/kWh) */
+.scer-a {
+    background: linear-gradient(135deg, #00C851 0%, #00A846 50%, #00695C 100%);
+    border: 2px solid #00A846;
+}
+
+.scer-a:hover {
+    box-shadow: 0 8px 25px rgba(0, 200, 81, 0.4);
+}
+
+/* B Rating - Good (1800-2499 tokens/kWh) */
+.scer-b {
+    background: linear-gradient(135deg, #00C851 0%, #8BC34A 50%, #689F38 100%);
+    border: 2px solid #8BC34A;
+}
+
+.scer-b:hover {
+    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.4);
+}
+
+/* C Rating - Average (1200-1799 tokens/kWh) */
+.scer-c {
+    background: linear-gradient(135deg, #FFEB3B 0%, #FFC107 50%, #F57C00 100%);
+    border: 2px solid #FFC107;
+}
+
+.scer-c:hover {
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+}
+
+/* D Rating - Poor (600-1199 tokens/kWh) */
+.scer-d {
+    background: linear-gradient(135deg, #FF9800 0%, #FF5722 50%, #D84315 100%);
+    border: 2px solid #FF5722;
+}
+
+.scer-d:hover {
+    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
+}
+
+/* E Rating - Very Poor (<600 tokens/kWh) */
+.scer-e {
+    background: linear-gradient(135deg, #F44336 0%, #D32F2F 50%, #B71C1C 100%);
+    border: 2px solid #D32F2F;
+}
+
+.scer-e:hover {
+    box-shadow: 0 8px 25px rgba(244, 67, 54, 0.4);
+}
+
+/* Small Badge Variants */
+.scer-badge-sm {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.scer-badge-lg {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+}
+
+/* Rating Labels with Text */
+.scer-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.scer-label-a {
+    background: linear-gradient(135deg, rgba(0, 200, 81, 0.2), rgba(0, 168, 70, 0.1));
+    color: #00C851;
+    border: 1px solid rgba(0, 200, 81, 0.3);
+}
+
+.scer-label-b {
+    background: linear-gradient(135deg, rgba(0, 200, 81, 0.2), rgba(139, 195, 74, 0.1));
+    color: #8BC34A;
+    border: 1px solid rgba(139, 195, 74, 0.3);
+}
+
+.scer-label-c {
+    background: linear-gradient(135deg, rgba(255, 235, 59, 0.2), rgba(255, 193, 7, 0.1));
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.scer-label-d {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 87, 34, 0.1));
+    color: #FF9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.scer-label-e {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.2), rgba(211, 47, 47, 0.1));
+    color: #F44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Rating Scale Display */
+.rating-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.rating-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.rating-info {
+    flex: 1;
+}
+
+.rating-title {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Rating Progress Bars */
+.rating-progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.rating-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.rating-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-a { background: linear-gradient(90deg, #00C851, #00A846); }
+.progress-b { background: linear-gradient(90deg, #00C851, #8BC34A); }
+.progress-c { background: linear-gradient(90deg, #FFEB3B, #FFC107); }
+.progress-d { background: linear-gradient(90deg, #FF9800, #FF5722); }
+.progress-e { background: linear-gradient(90deg, #F44336, #D32F2F); }
+
+/* Rating Comparison Chart */
+.rating-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.comparison-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.comparison-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.comparison-badge {
+    margin: 0 auto 0.5rem;
+}
+
+.comparison-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparison-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+/* Rating Tooltip */
+.rating-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.rating-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.rating-tooltip:hover::after {
+    opacity: 1;
+}
+
+/* Rating Legend */
+.rating-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rating-scale {
+        padding: 1rem;
+    }
+    
+    .rating-item {
+        padding: 0.5rem;
+    }
+    
+    .rating-comparison {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .scer-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .scer-badge-sm {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .scer-badge-lg {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .scer-badge::before,
+    .rating-progress-fill::after {
+        animation: none;
+    }
+    
+    .scer-badge:hover,
+    .rating-item:hover,
+    .comparison-item:hover {
+        transform: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .sccer-badge {
+        border-width: 3px;
+    }
+    
+    .rating-label {
+        border-width: 2px;
+    }
+    
+    .rating-item {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
