@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCER Rating for AI Models</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/main.css?v=10" rel="stylesheet">
+    <link href="css/rating-labels.css?v=10" rel="stylesheet">
+    <style>
+        /* CRITICAL MODAL OVERRIDE - Must be solid white */
+        #modelModal {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+        #modelModal .modal-container {
+            background: #fff !important;
+            background-color: #fff !important;
+            background-image: none !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            filter: none !important;
+        }
+
+        #modelModal .modal-container,
+        #modelModal .modal-header,
+        #modelModal .modal-body,
+        #modelModal .modal-section {
+            background: white !important;
+            background-color: white !important;
+            background-image: none !important;
+        }
+
+        #modelModal .metric-box {
+            background: #f8f9fa !important;
+            background-color: #f8f9fa !important;
+        }
+
+        #modalModelName {
+            color: #212529 !important;
+        }
+
+        #modalOrganization {
+            color: #6c757d !important;
+        }
+
+        #modelModal h2,
+        #modelModal h3 {
+            color: #212529 !important;
+        }
+
+        #modelModal .metric-label {
+            color: #6c757d !important;
+        }
+
+        #modelModal .metric-value {
+            color: #212529 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white border-b-2 border-gray-200 sticky top-0 z-50 px-3 sm:px-6 py-3 sm:py-4 mb-4 sm:mb-8 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-leaf text-white text-lg sm:text-xl"></i>
+                </div>
+                <div>
+                    <a href="#" onclick="showLeaderboard(); return false;" class="group cursor-pointer">
+                        <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent hover:from-green-700 hover:to-blue-700 transition-all" style="letter-spacing: 0.02em;">
+                            <span class="font-bold">SCER</span> Rating
+                        </h1>
+                    </a>
+                    <p class="text-xs text-gray-600 font-medium hidden sm:block">Software Carbon Efficiency Rating for AI Models</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <button class="text-gray-700 hover:text-green-600 transition-colors font-medium" onclick="showLeaderboard()">
+                    <i class="fas fa-trophy mr-2"></i>Leaderboard
+                </button>
+                <button class="text-gray-700 hover:text-green-600 transition-colors font-medium" onclick="showMethodology()">
+                    <i class="fas fa-flask mr-2"></i>Methodology
+                </button>
+                <button class="text-gray-700 hover:text-green-600 transition-colors font-medium" onclick="showAbout()">
+                    <i class="fas fa-info-circle mr-2"></i>About
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-3 sm:px-6 pb-8 sm:pb-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-8 sm:mb-12 bg-white rounded-2xl p-4 sm:p-6 md:p-8 border-2 border-gray-200">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
+                Carbon-Efficient AI for a Sustainable Future
+            </h2>
+            <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6 max-w-3xl mx-auto px-2">
+                Evaluate and compare AI models based on their carbon efficiency using the SCER framework.
+                Make informed decisions for sustainable AI deployment.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                <button class="bg-green-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-green-700 transition-all font-semibold text-sm sm:text-base" onclick="showLeaderboard()">
+                    <i class="fas fa-chart-line mr-2"></i>View Rankings
+                </button>
+                <button class="bg-blue-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-all font-semibold text-sm sm:text-base" onclick="app.showSubmitModel()">
+                    <i class="fas fa-plus mr-2"></i>Submit Model
+                </button>
+            </div>
+        </section>
+
+        <!-- Stats Overview -->
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="text-3xl font-bold text-green-600 metric-value">247</div>
+                <div class="text-sm text-gray-600 font-medium">Models Evaluated</div>
+            </div>
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="text-3xl font-bold text-blue-600 metric-value">1,247</div>
+                <div class="text-sm text-gray-600 font-medium">Avg Tokens/kWh</div>
+            </div>
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="text-3xl font-bold text-purple-600 metric-value">42.3</div>
+                <div class="text-sm text-gray-600 font-medium">g CO₂e/1k tokens</div>
+            </div>
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div class="text-3xl font-bold text-yellow-600 metric-value">A-</div>
+                <div class="text-sm text-gray-600 font-medium">Top Rating</div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="mb-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 sm:mb-6 gap-3 sm:gap-4">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900">AI Model Carbon Efficiency Leaderboard</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                        <i class="fas fa-database mr-1"></i>
+                        Data source: <span id="dataSource" class="relative font-semibold">Hugging Face LLM-Perf Leaderboard</span> •
+                        <span id="lastUpdated">Loading...</span> •
+                        <span id="modelCount">0 models</span>
+                    </p>
+                    <!-- Data Source Popup -->
+                    <div id="dataSourcePopup" class="hidden absolute z-50 bg-gray-900 border border-green-500 rounded-lg shadow-lg p-4 mt-2" style="min-width: 300px;">
+                        <div class="text-sm">
+                            <div class="font-semibold text-green-400 mb-2" id="popupTitle"></div>
+                            <div class="space-y-2">
+                                <div>
+                                    <span class="text-gray-400">Website:</span>
+                                    <a id="popupWebsiteUrl" href="#" target="_blank" class="text-blue-400 hover:text-blue-300 ml-2 inline-flex items-center">
+                                        <i class="fas fa-external-link-alt mr-1"></i>
+                                        <span id="popupWebsiteText"></span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400">Data:</span>
+                                    <a id="popupDataUrl" href="#" target="_blank" class="text-blue-400 hover:text-blue-300 ml-2 inline-flex items-center">
+                                        <i class="fas fa-external-link-alt mr-1"></i>
+                                        <span id="popupDataText"></span>
+                                    </a>
+                                </div>
+                                <div id="popupError" class="hidden text-yellow-400 mt-2 pt-2 border-t border-gray-700"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex flex-wrap gap-4">
+                        <select id="dataSourceSelect" class="filter-select" title="Choose data source">
+                            <option value="mlenergy" selected>ML.ENERGY Leaderboard ⭐</option>
+                            <option value="huggingface">Hugging Face LLM-Perf</option>
+                            <option value="sample">Sample Dataset</option>
+                        </select>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="small">Small Models (<5B params)</option>
+                            <option value="medium">Medium Models (5-15B params)</option>
+                            <option value="large">Large Models (15B+ params)</option>
+                        </select>
+                        <select id="sortFilter" class="filter-select">
+                            <option value="rating" selected>Sort by SCER Rating</option>
+                            <option value="efficiency">Sort by Efficiency</option>
+                            <option value="performance">Sort by Performance</option>
+                            <option value="composite">Sort by Composite Score</option>
+                            <option value="size">Sort by Model Size</option>
+                        </select>
+                        <input type="text" id="searchInput" placeholder="Search models..." class="filter-select" style="flex: 1; min-width: 200px;">
+                    </div>
+                    <button id="refreshBtn" class="bg-white border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all font-medium text-sm" onclick="app.refreshData()" title="Refresh data from current source">
+                        <i class="fas fa-sync-alt mr-2"></i>Refresh
+                    </button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Top Models Grid -->
+            <div id="topModelsGrid" class="models-grid mb-8">
+                <!-- Model cards will be dynamically inserted here -->
+            </div>
+
+            <!-- Full Table View -->
+            <div class="table-container">
+                <div class="table-wrapper">
+                    <table class="w-full">
+                        <thead class="border-b border-gray-700">
+                            <tr>
+                                <th class="text-left p-4 font-semibold">Rank</th>
+                                <th class="text-left p-4 font-semibold">Model</th>
+                                <th class="text-left p-4 font-semibold">SCER Rating</th>
+                                <th class="text-left p-4 font-semibold">Tokens/kWh</th>
+                                <th class="text-left p-4 font-semibold">CO₂e/1k tokens</th>
+                                <th class="text-left p-4 font-semibold">Performance</th>
+                                <th class="text-left p-4 font-semibold">Size</th>
+                            </tr>
+                        </thead>
+                        <tbody id="modelsTableBody">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="hidden mb-12">
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900">SCER Rating Methodology</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-green-400">Rating Scale</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="scer-badge scer-a text-sm">A</div>
+                                <span class="text-sm">Excellent (≥2500 tokens/kWh)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="scer-badge scer-b text-sm">B</div>
+                                <span class="text-sm">Good (1800-2499 tokens/kWh)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="scer-badge scer-c text-sm">C</div>
+                                <span class="text-sm">Average (1200-1799 tokens/kWh)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="scer-badge scer-d text-sm">D</div>
+                                <span class="text-sm">Poor (600-1199 tokens/kWh)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="scer-badge scer-e text-sm">E</div>
+                                <span class="text-sm">Very Poor (<600 tokens/kWh)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-blue-600">Calculation Method</h4>
+                        <div class="space-y-3 text-sm text-gray-700">
+                            <p><strong>Energy Efficiency:</strong> Tokens generated per kilowatt-hour (tokens/kWh)</p>
+                            <p><strong>Carbon Footprint:</strong> CO₂ equivalent per 1,000 tokens</p>
+                            <p><strong>Benchmark Hardware:</strong> Standardized GPU configurations</p>
+                            <p><strong>Workload:</strong> Standardized inference tasks</p>
+                            <p><strong>Data Source:</strong> <a href="https://huggingface.co/spaces/optimum/llm-perf-leaderboard" target="_blank" class="text-green-400 hover:text-green-300">Hugging Face LLM-Perf Leaderboard</a></p>
+                            <p><strong>SCER Specification:</strong> <a href="https://github.com/Green-Software-Foundation/scer/blob/dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md" target="_blank" class="text-green-400 hover:text-green-300"><i class="fab fa-github mr-1"></i>Official SCER for LLM Specification</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-6">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-600">Environmental Impact</h4>
+                    <p class="text-gray-700 mb-4">
+                        The SCER rating helps organizations make sustainable AI choices by providing transparent,
+                        comparable metrics on carbon efficiency. By selecting higher-rated models, organizations can
+                        significantly reduce their AI-related carbon footprint while maintaining performance requirements.
+                    </p>
+                    <div class="bg-green-500 bg-opacity-10 border border-green-500 border-opacity-30 rounded-lg p-4">
+                        <p class="text-sm text-green-400">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Switching from a D-rated to an A-rated model can reduce carbon emissions by up to 75% for the same workload.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-6 mt-6">
+                    <h4 class="text-lg font-semibold mb-4 text-green-600">
+                        <i class="fab fa-github mr-2"></i>Official SCER Framework
+                    </h4>
+                    <p class="text-gray-700 mb-4">
+                        This tool implements the Software Carbon Efficiency Rating (SCER) framework developed by the
+                        <a href="https://greensoftware.foundation/" target="_blank" class="text-green-400 hover:text-green-300">Green Software Foundation</a>.
+                        The SCER framework provides standardized metrics for measuring and comparing the carbon efficiency of software systems.
+                    </p>
+                    <div class="bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-30 rounded-lg p-4">
+                        <p class="text-sm text-blue-400 mb-3">
+                            <i class="fas fa-book mr-2"></i>
+                            <strong>Learn More About SCER</strong>
+                        </p>
+                        <div class="space-y-2">
+                            <a href="https://github.com/Green-Software-Foundation/scer/blob/dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md"
+                               target="_blank"
+                               class="text-green-400 hover:text-green-300 inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i>
+                                <span class="underline">SCER for LLM Specification</span>
+                                <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                            </a>
+                            <p class="text-xs text-gray-400 mt-1">
+                                Read the official specification for carbon efficiency rating of Large Language Models
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="hidden mb-12">
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900">About SCER for LLM</h3>
+
+                <div class="space-y-6 text-gray-700">
+                    <p class="text-lg">
+                        The SCER (Software Carbon Efficiency Rating) for LLM tool provides transparent carbon efficiency ratings
+                        for Large Language Models, helping organizations make sustainable AI deployment decisions.
+                    </p>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-gray-900">What is SCER?</h4>
+                        <p>
+                            SCER is a standardized framework developed by the Green Software Foundation to measure and compare
+                            the carbon efficiency of software systems. This tool applies the SCER methodology specifically to
+                            Large Language Models, providing an easy-to-understand A-E rating scale similar to energy labels
+                            on consumer appliances.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-gray-900">Why Carbon Efficiency Matters</h4>
+                        <p>
+                            AI models, particularly Large Language Models, consume significant computational resources and energy.
+                            As AI deployment scales globally, understanding and optimizing the carbon footprint of these models
+                            becomes crucial for sustainable technology development. By choosing more efficient models, organizations
+                            can reduce their environmental impact while maintaining high performance.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-gray-900">Data Sources</h4>
+                        <p class="mb-2">This tool aggregates data from multiple trusted sources:</p>
+                        <ul class="list-disc list-inside space-y-2 ml-4">
+                            <li><strong>ML.ENERGY Leaderboard:</strong> Real-world energy consumption measurements</li>
+                            <li><strong>Hugging Face LLM-Perf:</strong> Performance benchmarks and model specifications</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-gray-900">Open Source</h4>
+                        <p>
+                            This tool is open source and part of the Green Software Foundation's SCER initiative.
+                            We welcome contributions and feedback from the community to improve carbon efficiency
+                            measurement and promote sustainable AI practices.
+                        </p>
+                    </div>
+
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
+                        <p class="text-sm text-green-800">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>Get Involved:</strong> Visit the
+                            <a href="https://github.com/Green-Software-Foundation/scer" target="_blank" class="text-green-600 hover:text-green-700 underline">
+                                SCER GitHub repository
+                            </a>
+                            to learn more or contribute to the project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Model Details Modal -->
+    <div id="modelModal" class="modal-overlay hidden">
+        <div class="modal-container !bg-white !opacity-100" style="background: #ffffff !important; background-color: #ffffff !important; background-image: none !important; opacity: 1 !important;">
+            <div class="modal-header" style="background: #ffffff !important; background-color: #ffffff !important;">
+                <div>
+                    <h2 id="modalModelName" class="text-2xl font-bold" style="color: #212529 !important;"></h2>
+                    <p id="modalOrganization" class="text-gray-600" style="color: #6c757d !important;"></p>
+                </div>
+                <button id="closeModal" class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body" style="background: #ffffff !important; background-color: #ffffff !important;">
+                <!-- SCER Rating Section -->
+                <div class="modal-section" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-award"></i>
+                        SCER Rating
+                    </h3>
+                    <div class="flex items-center gap-4">
+                        <div id="modalRatingBadge"></div>
+                        <div>
+                            <div class="text-3xl font-bold" id="modalRatingText"></div>
+                            <div class="text-sm text-gray-600" id="modalRatingDescription"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Efficiency Metrics -->
+                <div class="modal-section" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-bolt"></i>
+                        Energy Efficiency
+                    </h3>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">Tokens per kWh</div>
+                            <div class="metric-value" id="modalTokensPerKwh"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">CO₂e per 1k tokens</div>
+                            <div class="metric-value" id="modalCo2Per1k"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Energy Consumed</div>
+                            <div class="metric-value" id="modalEnergyConsumed"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Total Tokens</div>
+                            <div class="metric-value" id="modalTotalTokens"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Information -->
+                <div class="modal-section" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-info-circle"></i>
+                        Model Information
+                    </h3>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">Parameters</div>
+                            <div class="metric-value" id="modalParameters"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Category</div>
+                            <div class="metric-value" id="modalCategory"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Precision</div>
+                            <div class="metric-value" id="modalPrecision"></div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Region</div>
+                            <div class="metric-value" id="modalRegion"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Benchmarks -->
+                <div class="modal-section" id="modalBenchmarksSection" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-chart-bar"></i>
+                        Performance Benchmarks
+                    </h3>
+                    <div id="modalBenchmarks" class="metrics-grid"></div>
+                </div>
+
+                <!-- Hardware Configuration -->
+                <div class="modal-section" id="modalHardwareSection" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-microchip"></i>
+                        Hardware Configuration
+                    </h3>
+                    <div id="modalHardware" class="metrics-grid"></div>
+                </div>
+
+                <!-- Application Types -->
+                <div class="modal-section" id="modalApplicationsSection" style="background: #ffffff !important; background-color: #ffffff !important;">
+                    <h3 class="modal-section-title" style="color: #212529 !important;">
+                        <i class="fas fa-tasks"></i>
+                        Application Types
+                    </h3>
+                    <div id="modalApplications" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t-2 border-gray-200 mt-12 px-6 py-8">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center items-center space-x-4 mb-4">
+                <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-sm text-gray-700">
+                    Powered by
+                    <a href="https://github.com/Green-Software-Foundation/scer/blob/dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md"
+                       target="_blank"
+                       class="text-green-600 hover:text-green-700 font-semibold">
+                        SCER Framework
+                    </a>
+                </span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">
+                Software Carbon Efficiency Rating - Promoting sustainable AI development
+            </p>
+
+            <!-- Disclaimer -->
+            <div class="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-4 md:p-6 mb-6 max-w-4xl mx-auto text-left">
+                <h3 class="text-base md:text-lg font-bold text-yellow-800 mb-3 flex items-center">
+                    <i class="fas fa-exclamation-triangle mr-2 text-sm md:text-base"></i>
+                    Important Disclaimer
+                </h3>
+
+                <div class="space-y-3 text-xs sm:text-sm text-gray-700">
+                    <p>
+                        <strong class="text-yellow-800">Accuracy Disclaimer:</strong> The SCER ratings and efficiency metrics displayed in this tool are based on publicly available benchmark data from third-party sources (ML.ENERGY Leaderboard, Hugging Face LLM-Perf, etc.). This data may not reflect the complete or most current picture of a model's carbon efficiency. Scores should be considered preliminary assessments and may vary based on hardware configuration, usage patterns, and measurement methodology.
+                    </p>
+
+                    <p>
+                        <strong class="text-yellow-800">Verification Required:</strong> Please independently verify all data sources, benchmark results, and efficiency claims before making decisions based on these evaluations. Model performance, energy consumption, and data availability may change over time. Always cross-reference with official model documentation and conduct your own testing where possible.
+                    </p>
+
+                    <p>
+                        <strong class="text-yellow-800">Use Case:</strong> This tool is a <strong>reference implementation</strong> of the <a href="https://github.com/Green-Software-Foundation/scer/blob/dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md" target="_blank" class="text-blue-600 underline hover:text-blue-700">SCER for LLM Draft Specification</a> and is intended for <strong>educational, research, and demonstration purposes</strong> to promote transparency and awareness in sustainable AI development. <strong>This tool is not suitable for critical business decisions or production deployment choices without thorough independent verification and testing.</strong>
+                    </p>
+
+                    <p class="text-xs text-gray-600 mt-3 pt-3 border-t border-yellow-200">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Data sources may have limitations in coverage, freshness, and methodology. For serious decision-making, consult multiple sources, conduct independent benchmarks, and engage with carbon efficiency experts.
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-sm">
+                <a href="https://github.com/Green-Software-Foundation/scer/blob/dev/use_cases/SCER_FOR_LLM/SCER_For_LLM_Specification.md"
+                   target="_blank"
+                   class="text-green-600 hover:text-green-700 font-semibold underline hover:no-underline transition-all">
+                    <i class="fab fa-github mr-1"></i>View SCER Specification
+                </a>
+                <span class="text-gray-400 mx-3">•</span>
+                <a href="https://greensoftware.foundation/"
+                   target="_blank"
+                   class="text-blue-600 hover:text-blue-700 font-semibold underline hover:no-underline transition-all">
+                    <i class="fas fa-external-link-alt mr-1"></i>Green Software Foundation
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/rating-algorithm.js"></script>
+    <script src="js/huggingface-adapter.js"></script>
+    <script src="js/mlenergy-adapter.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -44,3 +44,6 @@ Carbon Efficiency: The amount of carbon dioxide equivalent (CO2e) emitted per US
 ### Software Carbon Efficiency Rating
 - [Current baseline](https://github.com/Green-Software-Foundation/scer)
 - [Issues under review](https://github.com/Green-Software-Foundation/scer/issues)
+
+### Reference Implementations
+- **SCER for AI Models (LLM)**: [Live Demo](https://green-software-foundation.github.io/scer/scer-llm-tool/) | [Source Code](https://github.com/Green-Software-Foundation/scer/tree/dev/scer-llm-tool)

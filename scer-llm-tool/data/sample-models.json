@@ -1,0 +1,326 @@
+{
+  "models": [
+    {
+      "id": "phi-3-mini",
+      "name": "Phi-3 Mini",
+      "organization": "Microsoft",
+      "parameters": 3800000000,
+      "precision": "4-bit",
+      "category": "small",
+      "applicationTypes": ["text-generation", "reasoning"],
+      "totalTokens": 1280000,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 68.5,
+        "hellaswag": 72.3,
+        "mmlu": 69.1,
+        "truthfulqa": 65.8,
+        "winogrande": 71.2,
+        "gsm8k": 67.4
+      },
+      "hardware": {
+        "gpu": "NVIDIA RTX 4090",
+        "memory": "24GB",
+        "powerConsumption": "450W"
+      },
+      "lastUpdated": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "llama-3-8b",
+      "name": "Llama 3 8B",
+      "organization": "Meta",
+      "parameters": 8000000000,
+      "precision": "8-bit",
+      "category": "medium",
+      "applicationTypes": ["text-generation", "translation", "summarization"],
+      "totalTokens": 970200,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 72.8,
+        "hellaswag": 78.5,
+        "mmlu": 76.2,
+        "truthfulqa": 71.3,
+        "winogrande": 76.8,
+        "gsm8k": 73.5
+      },
+      "hardware": {
+        "gpu": "NVIDIA A100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "275W"
+      },
+      "lastUpdated": "2024-01-14T15:45:00Z"
+    },
+    {
+      "id": "gemma-2b",
+      "name": "Gemma 2B",
+      "organization": "Google",
+      "parameters": 2000000000,
+      "precision": "4-bit",
+      "category": "small",
+      "applicationTypes": ["text-generation", "translation"],
+      "totalTokens": 1405600,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 65.2,
+        "hellaswag": 69.8,
+        "mmlu": 64.5,
+        "truthfulqa": 62.1,
+        "winogrande": 68.3,
+        "gsm8k": 63.7
+      },
+      "hardware": {
+        "gpu": "NVIDIA RTX 4090",
+        "memory": "24GB",
+        "powerConsumption": "450W"
+      },
+      "lastUpdated": "2024-01-16T09:20:00Z"
+    },
+    {
+      "id": "mistral-7b",
+      "name": "Mistral 7B",
+      "organization": "Mistral AI",
+      "parameters": 7000000000,
+      "precision": "4-bit",
+      "category": "medium",
+      "applicationTypes": ["text-generation", "code-generation"],
+      "totalTokens": 1080000,
+      "energyConsumedKwh": 0.45,
+      "region": "eu",
+      "benchmarks": {
+        "arc": 70.1,
+        "hellaswag": 74.6,
+        "mmlu": 71.8,
+        "truthfulqa": 68.9,
+        "winogrande": 73.2,
+        "gsm8k": 69.5
+      },
+      "hardware": {
+        "gpu": "NVIDIA A100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "275W"
+      },
+      "lastUpdated": "2024-01-13T14:10:00Z"
+    },
+    {
+      "id": "qwen-1.8b",
+      "name": "Qwen 1.8B",
+      "organization": "Alibaba",
+      "parameters": 1800000000,
+      "precision": "4-bit",
+      "category": "small",
+      "applicationTypes": ["text-generation", "translation"],
+      "totalTokens": 1530000,
+      "energyConsumedKwh": 0.45,
+      "region": "china",
+      "benchmarks": {
+        "arc": 63.8,
+        "hellaswag": 67.2,
+        "mmlu": 62.9,
+        "truthfulqa": 60.5,
+        "winogrande": 66.1,
+        "gsm8k": 61.8
+      },
+      "hardware": {
+        "gpu": "NVIDIA RTX 4090",
+        "memory": "24GB",
+        "powerConsumption": "450W"
+      },
+      "lastUpdated": "2024-01-12T11:30:00Z"
+    },
+    {
+      "id": "gpt-3.5-turbo",
+      "name": "GPT-3.5 Turbo",
+      "organization": "OpenAI",
+      "parameters": 175000000000,
+      "precision": "16-bit",
+      "category": "large",
+      "applicationTypes": ["text-generation", "translation", "summarization", "code-generation"],
+      "totalTokens": 540000,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 75.3,
+        "hellaswag": 79.8,
+        "mmlu": 77.5,
+        "truthfulqa": 73.2,
+        "winogrande": 78.1,
+        "gsm8k": 74.6
+      },
+      "hardware": {
+        "gpu": "NVIDIA H100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "350W"
+      },
+      "lastUpdated": "2024-01-11T16:45:00Z"
+    },
+    {
+      "id": "claude-3-haiku",
+      "name": "Claude 3 Haiku",
+      "organization": "Anthropic",
+      "parameters": 20000000000,
+      "precision": "8-bit",
+      "category": "large",
+      "applicationTypes": ["text-generation", "reasoning", "analysis"],
+      "totalTokens": 720000,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 76.1,
+        "hellaswag": 80.2,
+        "mmlu": 78.3,
+        "truthfulqa": 74.5,
+        "winogrande": 79.0,
+        "gsm8k": 75.8
+      },
+      "hardware": {
+        "gpu": "NVIDIA H100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "350W"
+      },
+      "lastUpdated": "2024-01-10T13:20:00Z"
+    },
+    {
+      "id": "stable-code-3b",
+      "name": "Stable Code 3B",
+      "organization": "Stability AI",
+      "parameters": 3000000000,
+      "precision": "4-bit",
+      "category": "small",
+      "applicationTypes": ["code-generation", "text-generation"],
+      "totalTokens": 1170000,
+      "energyConsumedKwh": 0.45,
+      "region": "us",
+      "benchmarks": {
+        "arc": 66.4,
+        "hellaswag": 70.8,
+        "mmlu": 67.2,
+        "truthfulqa": 64.1,
+        "winogrande": 69.5,
+        "gsm8k": 65.3
+      },
+      "hardware": {
+        "gpu": "NVIDIA RTX 4090",
+        "memory": "24GB",
+        "powerConsumption": "450W"
+      },
+      "lastUpdated": "2024-01-09T10:15:00Z"
+    },
+    {
+      "id": "yi-6b",
+      "name": "Yi 6B",
+      "organization": "01.AI",
+      "parameters": 6000000000,
+      "precision": "8-bit",
+      "category": "medium",
+      "applicationTypes": ["text-generation", "translation"],
+      "totalTokens": 855000,
+      "energyConsumedKwh": 0.45,
+      "region": "china",
+      "benchmarks": {
+        "arc": 71.5,
+        "hellaswag": 75.9,
+        "mmlu": 73.8,
+        "truthfulqa": 70.2,
+        "winogrande": 74.6,
+        "gsm8k": 72.1
+      },
+      "hardware": {
+        "gpu": "NVIDIA A100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "275W"
+      },
+      "lastUpdated": "2024-01-08T12:30:00Z"
+    },
+    {
+      "id": "deepseek-coder-6.7b",
+      "name": "DeepSeek Coder 6.7B",
+      "organization": "DeepSeek",
+      "parameters": 6700000000,
+      "precision": "4-bit",
+      "category": "medium",
+      "applicationTypes": ["code-generation", "text-generation"],
+      "totalTokens": 990000,
+      "energyConsumedKwh": 0.45,
+      "region": "china",
+      "benchmarks": {
+        "arc": 69.8,
+        "hellaswag": 74.1,
+        "mmlu": 71.5,
+        "truthfulqa": 68.3,
+        "winogrande": 73.0,
+        "gsm8k": 70.2
+      },
+      "hardware": {
+        "gpu": "NVIDIA A100 80GB",
+        "memory": "80GB",
+        "powerConsumption": "275W"
+      },
+      "lastUpdated": "2024-01-07T15:45:00Z"
+    }
+  ],
+  "categories": {
+    "small": {
+      "name": "Small Models",
+      "description": "Models with less than 5 billion parameters",
+      "maxParameters": 5000000000
+    },
+    "medium": {
+      "name": "Medium Models", 
+      "description": "Models with 5-15 billion parameters",
+      "minParameters": 5000000000,
+      "maxParameters": 15000000000
+    },
+    "large": {
+      "name": "Large Models",
+      "description": "Models with more than 15 billion parameters",
+      "minParameters": 15000000000
+    }
+  },
+  "applicationTypes": {
+    "text-generation": {
+      "name": "Text Generation",
+      "description": "General purpose text generation and completion"
+    },
+    "translation": {
+      "name": "Translation",
+      "description": "Language translation and localization"
+    },
+    "summarization": {
+      "name": "Summarization",
+      "description": "Text summarization and condensation"
+    },
+    "code-generation": {
+      "name": "Code Generation",
+      "description": "Programming code generation and assistance"
+    },
+    "reasoning": {
+      "name": "Reasoning",
+      "description": "Logical reasoning and problem solving"
+    },
+    "analysis": {
+      "name": "Analysis",
+      "description": "Data analysis and insight generation"
+    }
+  },
+  "regions": {
+    "us": {
+      "name": "United States",
+      "emissionFactor": 0.385
+    },
+    "eu": {
+      "name": "European Union",
+      "emissionFactor": 0.276
+    },
+    "china": {
+      "name": "China",
+      "emissionFactor": 0.581
+    },
+    "global": {
+      "name": "Global Average",
+      "emissionFactor": 0.475
+    }
+  }
+}
