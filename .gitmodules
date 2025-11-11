@@ -1,0 +1,3 @@
+[submodule "GSCL/kepler"]
+	path = GSCL/kepler
+	url = https://github.com/sustainable-computing-io/kepler
